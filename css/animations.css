@@ -1,0 +1,219 @@
+/* =====================================================
+   PINEAPPLIX — Hero Canvas & SVG Circuit Visualization
+   ===================================================== */
+
+/* Circuit SVG animation keyframes for the hero visualization */
+@keyframes signal-pulse {
+  0%, 100% { stroke-dashoffset: 200; opacity: 0.2; }
+  50% { stroke-dashoffset: 0; opacity: 0.9; }
+}
+
+@keyframes signal-flow {
+  0% { stroke-dashoffset: 300; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.5; r: 5; }
+  50% { opacity: 1; r: 7; }
+}
+
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.hero-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* SVG node boxes */
+.soc-node {
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.soc-node:hover .soc-node-bg {
+  fill-opacity: 0.15;
+}
+
+/* Signal path animations */
+.signal-path-1 {
+  stroke-dasharray: 6 3;
+  animation: signal-flow 3s linear infinite;
+}
+
+.signal-path-2 {
+  stroke-dasharray: 6 3;
+  animation: signal-flow 3s linear infinite 0.8s;
+}
+
+.signal-path-3 {
+  stroke-dasharray: 6 3;
+  animation: signal-flow 3s linear infinite 1.6s;
+}
+
+.signal-path-4 {
+  stroke-dasharray: 6 3;
+  animation: signal-flow 2.5s linear infinite 0.4s;
+}
+
+.signal-path-5 {
+  stroke-dasharray: 6 3;
+  animation: signal-flow 2.5s linear infinite 1.2s;
+}
+
+.blink-dot {
+  animation: node-pulse 2s ease-in-out infinite;
+}
+
+.blink-dot-2 {
+  animation: node-pulse 2s ease-in-out infinite 0.7s;
+}
+
+.blink-dot-3 {
+  animation: node-pulse 2s ease-in-out infinite 1.4s;
+}
+
+/* Hero background trace lines */
+.hero-trace {
+  stroke-dasharray: 4 8;
+  animation: signal-flow 8s linear infinite;
+  opacity: 0.08;
+}
+
+/* Active signal particle */
+.signal-particle {
+  animation: particle-travel 3s linear infinite;
+}
+
+@keyframes particle-travel {
+  0% { offset-distance: 0%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+/* Status indicator pulse */
+@keyframes status-ring {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+
+.status-ring {
+  animation: status-ring 2s ease-out infinite;
+  transform-origin: center;
+}
+
+/* ── Additional layout utilities ── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  z-index: 9999;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus { top: 16px; }
+
+/* ── Form submission states ── */
+.form-success {
+  display: none;
+  padding: 20px;
+  background: var(--green-dim);
+  border: 1px solid rgba(76, 175, 130, 0.3);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--green);
+  text-align: center;
+}
+
+.form-success.visible { display: block; }
+
+/* ── Sticky section indicator ── */
+.section-indicator {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.section-indicator.visible { opacity: 1; }
+
+.section-indicator__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.section-indicator__dot.active {
+  background: var(--accent-bright);
+  height: 20px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1280px) {
+  .section-indicator { display: none; }
+}
+
+/* ── Notification banner (if needed) ── */
+.announce-bar {
+  background: var(--accent-dim);
+  border-bottom: 1px solid rgba(91, 141, 222, 0.2);
+  padding: 10px 0;
+  position: relative;
+  z-index: 1001;
+}
+
+.announce-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-bright);
+}
+
+/* ── Product card tag dot ── */
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status-dot--active { background: var(--accent-bright); }
+.status-dot--amber { background: var(--amber); }
+.status-dot--muted { background: var(--text-muted); }

@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pineapplix — Semiconductor IP, built for real silicon.</title>
+  <meta name="description" content="Pineapplix is an independent semiconductor IP company developing reusable, configurable, verification-ready IP for ASIC, FPGA and SoC development." />
+  <meta name="keywords" content="semiconductor IP, ASIC, FPGA, SoC, RTL, UVM, verification, UART, SystemVerilog, IP core" />
+  <meta name="author" content="Pineapplix" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pineapplix — Semiconductor IP, built for real silicon." />
+  <meta property="og:description" content="Reusable, configurable and verification-ready IP for ASIC, FPGA and SoC development." />
+  <meta property="og:site_name" content="Pineapplix" />
+  <meta property="og:url" content="https://pineapplix.io" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pineapplix — Semiconductor IP" />
+  <meta name="twitter:description" content="Reusable, configurable and verification-ready IP for ASIC, FPGA and SoC development." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pineapplix.io" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%2309090f'/><text x='4' y='24' font-family='monospace' font-size='22' fill='%235b8dde' font-weight='bold'>P</text></svg>" />
+</head>
+<body>
+
+<!-- Skip link for accessibility -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════ -->
+<nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo" aria-label="Pineapplix home">PINEAPPLI<span>X</span></a>
+
+    <div class="nav__links" role="list">
+      <a href="#products"    class="nav__link" role="listitem">Products</a>
+      <a href="#technology"  class="nav__link" role="listitem">Technology</a>
+
+      <a href="#resources"   class="nav__link" role="listitem">Resources</a>
+      <a href="#about"       class="nav__link" role="listitem">About</a>
+      <a href="#contact"     class="nav__link" role="listitem">Contact</a>
+    </div>
+
+    <div class="nav__actions">
+      <a href="https://github.com/pineapplix" class="nav__github" target="_blank" rel="noopener noreferrer" aria-label="Pineapplix on GitHub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
+        GitHub →
+      </a>
+      <a href="#contact" class="btn btn--primary btn--sm">Request Access</a>
+    </div>
+
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="nav__mobile" id="mobile-menu" role="menu" aria-label="Mobile navigation">
+  <a href="#products"       class="nav__mobile-link" role="menuitem">Products</a>
+  <a href="#technology"     class="nav__mobile-link" role="menuitem">Technology</a>
+
+  <a href="#resources"      class="nav__mobile-link" role="menuitem">Resources</a>
+  <a href="#about"          class="nav__mobile-link" role="menuitem">About</a>
+  <a href="#contact"        class="nav__mobile-link" role="menuitem">Contact</a>
+  <a href="https://github.com/pineapplix" class="nav__mobile-link" role="menuitem">GitHub →</a>
+</div>
+
+<main id="main-content">
+
+<!-- ════════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="hero-headline">
+  <div class="hero__inner">
+
+    <!-- Content -->
+    <div class="hero__content">
+      <div class="hero__eyebrow" aria-label="Section identifier">
+        PINEAPPLIX / SEMICONDUCTOR IP
+      </div>
+
+      <h1 class="hero__headline" id="hero-headline">
+        Semiconductor IP,<br>
+        <em>built for real silicon.</em>
+      </h1>
+
+      <p class="hero__sub">
+        Reusable, configurable and verification-ready IP for ASIC, FPGA and SoC development.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#products" class="btn btn--primary" id="hero-cta-explore">
+          Explore IP <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SoC Architecture Visualization -->
+    <div class="hero__viz" aria-hidden="true">
+      <svg class="hero-svg" id="hero-svg" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SoC IP Architecture diagram">
+
+        <!-- Background trace lines -->
+        <line x1="0" y1="60" x2="480" y2="60" stroke="rgba(91,141,222,0.06)" stroke-width="1" />
+        <line x1="0" y1="300" x2="480" y2="300" stroke="rgba(91,141,222,0.06)" stroke-width="1" />
+        <line x1="60" y1="0" x2="60" y2="360" stroke="rgba(91,141,222,0.06)" stroke-width="1" />
+        <line x1="420" y1="0" x2="420" y2="360" stroke="rgba(91,141,222,0.06)" stroke-width="1" />
+
+        <!-- ── CPU Block ── -->
+        <g class="soc-node" transform="translate(20, 40)">
+          <rect class="soc-node-bg" x="0" y="0" width="110" height="70" rx="6"
+            fill="rgba(91,141,222,0.07)" stroke="rgba(91,141,222,0.4)" stroke-width="1"/>
+          <text x="55" y="20" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#9494a8" letter-spacing="2">CPU CORE</text>
+          <text x="55" y="40" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="12" fill="#e8e8f0" font-weight="700">CPU</text>
+          <text x="55" y="57" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#5a5a72" letter-spacing="1">RV32 / ARM</text>
+          <!-- Status dot -->
+          <circle cx="98" cy="10" r="4" fill="rgba(91,141,222,0.3)" class="status-ring"/>
+          <circle cx="98" cy="10" r="3" fill="#5b8dde" class="blink-dot"/>
+        </g>
+
+        <!-- CPU → Bus signal -->
+        <path d="M 130 75 L 175 75" stroke="rgba(91,141,222,0.35)" stroke-width="1.5"
+          fill="none" class="signal-path-1" stroke-dasharray="4 4"/>
+        <!-- Arrow head -->
+        <polygon points="172,71 180,75 172,79" fill="rgba(91,141,222,0.5)" />
+
+        <!-- ── Bus / Interconnect ── -->
+        <g class="soc-node" transform="translate(180, 50)">
+          <rect class="soc-node-bg" x="0" y="0" width="120" height="50" rx="6"
+            fill="rgba(91,141,222,0.1)" stroke="rgba(91,141,222,0.5)" stroke-width="1.5"/>
+          <text x="60" y="17" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#9494a8" letter-spacing="2">SYSTEM BUS</text>
+          <text x="60" y="34" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="10" fill="#7aaef5" font-weight="700">AXI4 / APB</text>
+        </g>
+
+        <!-- Bus → Peripheral signal -->
+        <path d="M 300 75 L 345 75" stroke="rgba(91,141,222,0.35)" stroke-width="1.5"
+          fill="none" class="signal-path-2" stroke-dasharray="4 4"/>
+        <polygon points="342,71 350,75 342,79" fill="rgba(91,141,222,0.5)" />
+
+        <!-- ── Peripheral IP ── -->
+        <g class="soc-node" transform="translate(350, 40)">
+          <rect class="soc-node-bg" x="0" y="0" width="110" height="70" rx="6"
+            fill="rgba(91,141,222,0.07)" stroke="rgba(91,141,222,0.4)" stroke-width="1"/>
+          <text x="55" y="20" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#9494a8" letter-spacing="2">PROTOCOL IP</text>
+          <text x="55" y="38" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="10" fill="#e8e8f0" font-weight="700">I²C / SPI</text>
+          <text x="55" y="54" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#5a5a72" letter-spacing="1">UART / GPIO</text>
+          <circle cx="12" cy="10" r="4" fill="rgba(91,141,222,0.3)" class="status-ring"/>
+          <circle cx="12" cy="10" r="3" fill="#5b8dde" class="blink-dot-2"/>
+        </g>
+
+        <!-- Vertical connections from bus -->
+        <!-- Bus → UVM Env (down-left) -->
+        <path d="M 240 100 L 240 145" stroke="rgba(91,141,222,0.3)" stroke-width="1.5"
+          fill="none" class="signal-path-3" stroke-dasharray="4 4"/>
+        <polygon points="236,142 240,150 244,142" fill="rgba(91,141,222,0.4)" />
+
+        <!-- ── UVM Verification ── -->
+        <g class="soc-node" transform="translate(155, 150)">
+          <rect class="soc-node-bg" x="0" y="0" width="170" height="80" rx="6"
+            fill="rgba(76,175,130,0.06)" stroke="rgba(76,175,130,0.35)" stroke-width="1"/>
+          <text x="85" y="18" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#9494a8" letter-spacing="2">VERIFICATION ENV</text>
+          <text x="85" y="36" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="10" fill="#4caf82" font-weight="700">UVM</text>
+          <!-- Sub items -->
+          <text x="28" y="55" font-family="'Space Mono', monospace" font-size="7" fill="#5a5a72">• SVA</text>
+          <text x="28" y="68" font-family="'Space Mono', monospace" font-size="7" fill="#5a5a72">• COVERAGE</text>
+          <text x="110" y="55" font-family="'Space Mono', monospace" font-size="7" fill="#5a5a72">• SCOREBOARD</text>
+          <text x="110" y="68" font-family="'Space Mono', monospace" font-size="7" fill="#5a5a72">• REGRESSION</text>
+        </g>
+
+        <!-- Peripheral → Verification (right to UVM) -->
+        <path d="M 405 110 L 405 140 L 325 165" stroke="rgba(76,175,130,0.25)" stroke-width="1"
+          fill="none" stroke-dasharray="3 5"/>
+
+        <!-- CPU → Verification (left to UVM) -->
+        <path d="M 75 110 L 75 165 L 155 175" stroke="rgba(76,175,130,0.2)" stroke-width="1"
+          fill="none" stroke-dasharray="3 5"/>
+
+        <!-- UVM → FPGA Reference -->
+        <path d="M 240 230 L 240 265" stroke="rgba(200,148,58,0.4)" stroke-width="1.5"
+          fill="none" class="signal-path-4" stroke-dasharray="4 4"/>
+        <polygon points="236,262 240,270 244,262" fill="rgba(200,148,58,0.5)" />
+
+        <!-- ── FPGA Reference ── -->
+        <g class="soc-node" transform="translate(140, 270)">
+          <rect class="soc-node-bg" x="0" y="0" width="200" height="60" rx="6"
+            fill="rgba(200,148,58,0.05)" stroke="rgba(200,148,58,0.35)" stroke-width="1"/>
+          <text x="100" y="18" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#9494a8" letter-spacing="2">FPGA REFERENCE DESIGN</text>
+          <text x="100" y="37" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="10" fill="#c8943a" font-weight="700">ASIC / FPGA / SoC</text>
+          <text x="100" y="52" text-anchor="middle" font-family="'Space Mono', monospace"
+            font-size="7" fill="#5a5a72">INTEGRATION VALIDATED</text>
+        </g>
+
+        <!-- Corner decorators -->
+        <rect x="2" y="2" width="16" height="1" fill="rgba(91,141,222,0.3)"/>
+        <rect x="2" y="2" width="1" height="16" fill="rgba(91,141,222,0.3)"/>
+        <rect x="462" y="2" width="16" height="1" fill="rgba(91,141,222,0.3)"/>
+        <rect x="477" y="2" width="1" height="16" fill="rgba(91,141,222,0.3)"/>
+        <rect x="2" y="357" width="16" height="1" fill="rgba(91,141,222,0.3)"/>
+        <rect x="2" y="342" width="1" height="16" fill="rgba(91,141,222,0.3)"/>
+        <rect x="462" y="357" width="16" height="1" fill="rgba(91,141,222,0.3)"/>
+        <rect x="477" y="342" width="1" height="16" fill="rgba(91,141,222,0.3)"/>
+
+      </svg>
+    </div>
+  </div>
+
+  <!-- Metadata Bar -->
+  <div class="hero__meta" aria-label="Technology tags">
+    <div class="hero__meta-inner">
+      <span class="hero__meta-item">ASIC / FPGA / SoC</span>
+      <span class="hero__meta-item">RTL / UVM / ASSERTIONS</span>
+      <span class="hero__meta-item">PARAMETERIZED IP</span>
+      <span class="hero__meta-item">VERIFICATION READY</span>
+      <span class="hero__meta-item">SYSTEMVERILOG</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     PHILOSOPHY SECTION
+════════════════════════════════════════════ -->
+<section class="section section--dark" id="philosophy" aria-labelledby="philosophy-heading">
+  <div class="container">
+    <span class="section-label">ENGINEERING PHILOSOPHY</span>
+
+    <h2 class="section-heading" id="philosophy-heading">
+      IP should be more than RTL.
+    </h2>
+    <p class="section-subheading">
+      Pineapplix focuses on the complete engineering package around an IP block — not just the synthesizable logic.
+    </p>
+
+    <div class="philosophy__pillars" role="list">
+
+      <article class="pillar reveal" role="listitem">
+        <span class="pillar__number">01 ————</span>
+        <div class="pillar__title">
+          <svg class="pillar__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="6" height="6" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="9" y="1" width="6" height="6" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="1" y="9" width="6" height="6" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          DESIGN
+        </div>
+        <p class="pillar__desc">
+          Clean, synthesizable, parameterized RTL. Architecture that scales with requirements and targets ASIC and FPGA implementation.
+        </p>
+      </article>
+
+      <article class="pillar reveal reveal--delay-1" role="listitem">
+        <span class="pillar__number">02 ————</span>
+        <div class="pillar__title">
+          <svg class="pillar__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          VERIFY
+        </div>
+        <p class="pillar__desc">
+          SystemVerilog, UVM, assertions, functional coverage and regression infrastructure — developed alongside the RTL, not after.
+        </p>
+      </article>
+
+      <article class="pillar reveal reveal--delay-2" role="listitem">
+        <span class="pillar__number">03 ————</span>
+        <div class="pillar__title">
+          <svg class="pillar__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="8" cy="8" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          INTEGRATE
+        </div>
+        <p class="pillar__desc">
+          Clear interfaces, register maps, parameters and integration documentation. Designed for the engineer connecting IP to a subsystem.
+        </p>
+      </article>
+
+      <article class="pillar reveal reveal--delay-3" role="listitem">
+        <span class="pillar__number">04 ————</span>
+        <div class="pillar__title">
+          <svg class="pillar__icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 14L8 2l6 12H2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M8 6v4M8 12v.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          VALIDATE
+        </div>
+        <p class="pillar__desc">
+          Simulation, lint, CDC/RDC checks, synthesis and FPGA reference implementations to validate real-world integration behavior.
+        </p>
+      </article>
+    </div>
+
+    <blockquote class="philosophy__statement reveal">
+      We design IP with the integration engineer in mind — not just the RTL designer.
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     PRODUCTS SECTION
+════════════════════════════════════════════ -->
+<section class="section" id="products" aria-labelledby="products-heading">
+  <div class="container">
+    <span class="section-label">PRODUCTS</span>
+
+    <h2 class="section-heading" id="products-heading">
+      IP designed as a product.
+    </h2>
+    <p class="section-subheading">
+      Every Pineapplix IP block is developed with RTL, verification, documentation and integration in mind.
+    </p>
+
+    <div class="products__grid">
+
+      <!-- Product 01: PNX-UART (featured) -->
+      <article class="product-card product-card--wide reveal" aria-labelledby="product-uart-title">
+        <div class="product-card__body">
+          <div class="product-card__header">
+            <div>
+              <h3 class="product-card__title" id="product-uart-title">Pineapplix UART Controller</h3>
+              <span style="font-family:var(--font-mono); font-size:0.6rem; color:var(--text-muted); letter-spacing:0.1em;">PNX-IP-UART-001</span>
+            </div>
+            <span class="tag tag--accent">
+              <span class="status-dot status-dot--active"></span>
+              V1.0.0 / DEVELOPMENT
+            </span>
+          </div>
+          <p class="product-card__desc">
+            Configurable, synthesizable UART controller designed for FPGA and ASIC integration. Full-duplex serial communication with an AXI4-Lite register interface, independent FIFOs and a complete SystemVerilog RTL implementation.
+          </p>
+
+          <div class="product-features" aria-label="Feature list">
+            <span class="product-feature">Full-duplex async serial</span>
+            <span class="product-feature">AXI4-Lite register interface</span>
+            <span class="product-feature">Configurable baud rate</span>
+            <span class="product-feature">Independent TX / RX FIFOs</span>
+            <span class="product-feature">Interrupt support</span>
+            <span class="product-feature">RX oversampling</span>
+            <span class="product-feature">Framing-error detection</span>
+            <span class="product-feature">SystemVerilog RTL</span>
+          </div>
+        </div>
+
+        <div class="product-card__footer">
+          <a href="#contact" class="btn btn--primary" id="uart-view-btn">Request Access <span class="btn-arrow" aria-hidden="true">→</span></a>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <span class="tag tag--muted" style="font-size:0.6rem;">SYSTEMVERILOG</span>
+            <span class="tag tag--muted" style="font-size:0.6rem;">FPGA / ASIC</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 02: Verification IP -->
+      <article class="product-card product-card--coming-soon reveal reveal--delay-1" aria-labelledby="product-vip-title">
+        <div class="product-card__header">
+          <h3 class="product-card__title" id="product-vip-title">Verification IP</h3>
+          <span class="tag tag--amber">
+            <span class="status-dot status-dot--amber"></span>
+            COMING SOON
+          </span>
+        </div>
+        <p class="product-card__desc">
+          Reusable verification infrastructure for validating digital interfaces and subsystem behavior.
+        </p>
+
+        <div class="product-features" style="grid-template-columns: 1fr;">
+          <span class="product-feature">SystemVerilog</span>
+          <span class="product-feature">UVM</span>
+          <span class="product-feature">Assertions</span>
+          <span class="product-feature">Functional coverage</span>
+          <span class="product-feature">Constrained-random testing</span>
+          <span class="product-feature">Regression infrastructure</span>
+        </div>
+
+        <div class="product-card__footer" style="margin-top:auto;">
+          <a href="#contact" class="btn btn--outline btn--sm" id="vip-explore-btn">Explore Verification</a>
+        </div>
+      </article>
+
+      <!-- Product 03: Assertion IP -->
+      <article class="product-card product-card--coming-soon reveal reveal--delay-2" aria-labelledby="product-aip-title">
+        <div class="product-card__header">
+          <h3 class="product-card__title" id="product-aip-title">Assertion IP</h3>
+          <span class="tag tag--muted">PLANNED</span>
+        </div>
+        <p class="product-card__desc">
+          Reusable protocol and design-property assertions for faster verification and integration. Designed to be applied at the IP boundary and subsystem level.
+        </p>
+
+        <div class="product-features" style="grid-template-columns: 1fr;">
+          <span class="product-feature">Protocol assertions</span>
+          <span class="product-feature">Interface property checks</span>
+          <span class="product-feature">Design-level invariants</span>
+          <span class="product-feature">Simulation & formal targets</span>
+        </div>
+
+        <div class="product-card__footer" style="margin-top:auto;">
+          <a href="#contact" class="btn btn--ghost btn--sm" id="aip-learn-btn">Learn More</a>
+        </div>
+      </article>
+
+      <!-- More IP in Development -->
+      <article class="product-card product-card--future reveal reveal--delay-3" aria-label="Upcoming IP products">
+        <p class="future-title">More IP in development</p>
+        <p class="future-items">
+          Ethernet &nbsp;•&nbsp; PCIe &nbsp;•&nbsp; Memory Interfaces &nbsp;•&nbsp; SoC Infrastructure
+        </p>
+        <a href="#contact" class="btn btn--ghost btn--sm" style="margin-top:16px;" id="future-ip-btn">Get notified</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     ARCHITECTURE SECTION
+════════════════════════════════════════════ -->
+<section class="section section--dark arch" id="architecture" aria-labelledby="arch-heading">
+  <div class="container">
+    <span class="section-label">IP ARCHITECTURE</span>
+
+    <h2 class="section-heading" id="arch-heading">
+      One IP. Complete engineering package.
+    </h2>
+    <p class="section-subheading">
+      Pineapplix delivers more than a netlist. Each IP block is a structured engineering product with a consistent architecture.
+    </p>
+
+    <div class="arch__diagram reveal" role="img" aria-label="IP architecture diagram showing RTL, Verification, and Documentation components">
+
+      <!-- Top Label -->
+      <div class="arch__top-label">PINEAPPLIX IP PRODUCT</div>
+
+      <!-- Root Node -->
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div class="arch__root">
+          <span class="arch__root-label">PINEAPPLIX IP</span>
+          <div style="height:1px; background:rgba(91,141,222,0.2); margin:10px 0;"></div>
+          <span style="font-family:var(--font-mono); font-size:0.625rem; color:var(--text-muted); letter-spacing:0.08em;">PNX-UART v1.0.0</span>
+        </div>
+
+        <!-- Horizontal connector -->
+        <div style="position:relative; width:100%; height:48px;">
+          <div style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:1px; height:100%; background:linear-gradient(to bottom, rgba(91,141,222,0.5), rgba(91,141,222,0.3));"></div>
+          <div style="position:absolute; top:48px; left:50%; transform:translate(-50%, 0); width:520px; height:1px; background:linear-gradient(90deg, transparent, rgba(91,141,222,0.3) 20%, rgba(91,141,222,0.6) 50%, rgba(91,141,222,0.3) 80%, transparent);"></div>
+        </div>
+
+        <!-- Branch Nodes -->
+        <div class="arch__branches" style="width:100%; max-width:600px;">
+
+          <!-- RTL Branch -->
+          <div class="arch__branch">
+            <div class="arch__branch-connector animated"></div>
+            <div class="arch__node">
+              <div class="arch__node-title">RTL</div>
+              <div class="arch__node-items">
+                <div class="arch__node-item">Parameterized</div>
+                <div class="arch__node-item">Synthesizable</div>
+                <div class="arch__node-item">Configurable</div>
+                <div class="arch__node-item">Lint-clean</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verification Branch -->
+          <div class="arch__branch">
+            <div class="arch__branch-connector animated" style="animation-delay: 0.8s;"></div>
+            <div class="arch__node" style="border-color:rgba(76,175,130,0.3);">
+              <div class="arch__node-title" style="color:#4caf82;">VERIFICATION</div>
+              <div class="arch__node-items">
+                <div class="arch__node-item">UVM Env</div>
+                <div class="arch__node-item">SVA</div>
+                <div class="arch__node-item">Coverage</div>
+                <div class="arch__node-item">Regression</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Documentation Branch -->
+          <div class="arch__branch">
+            <div class="arch__branch-connector animated" style="animation-delay: 1.6s;"></div>
+            <div class="arch__node" style="border-color:rgba(200,148,58,0.3);">
+              <div class="arch__node-title" style="color:#c8943a;">DOCUMENTATION</div>
+              <div class="arch__node-items">
+                <div class="arch__node-item">Integration guide</div>
+                <div class="arch__node-item">Register map</div>
+                <div class="arch__node-item">Parameters</div>
+                <div class="arch__node-item">Timing diagrams</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom connector to ASIC/FPGA -->
+        <div class="arch__bottom-row" style="margin-top:48px;">
+          <div class="arch__ref-connector"></div>
+          <div class="arch__ref-node">
+            <span class="arch__ref-label">REFERENCE DESIGN</span>
+            <div class="arch__ref-title">ASIC / FPGA / SoC</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     TECHNOLOGY SECTION
+════════════════════════════════════════════ -->
+<section class="section" id="technology" aria-labelledby="technology-heading">
+  <div class="container">
+    <span class="section-label">TECHNOLOGY</span>
+
+    <h2 class="section-heading" id="technology-heading">
+      Built around engineering fundamentals.
+    </h2>
+    <p class="section-subheading">
+      Each IP block is developed using a rigorous, disciplined engineering stack.
+    </p>
+
+    <div class="tech__grid">
+
+      <!-- RTL -->
+      <div class="tech-card reveal">
+        <div class="tech-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="8" width="14" height="10" rx="2" stroke="#5b8dde" stroke-width="1.2"/>
+            <rect x="20" y="8" width="14" height="10" rx="2" stroke="#5b8dde" stroke-width="1.2"/>
+            <rect x="11" y="22" width="14" height="10" rx="2" stroke="#5b8dde" stroke-width="1.2"/>
+            <path d="M9 13h-4m4 5H5M27 13h4m-4 5h4" stroke="#5b8dde" stroke-width="1" stroke-linecap="round"/>
+            <path d="M16 22V18M20 22V18" stroke="#5b8dde" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="tech-card__title">RTL</div>
+        <ul class="tech-list" aria-label="RTL technology stack">
+          <li>SystemVerilog</li>
+          <li>Verilog</li>
+          <li>Parameterized architectures</li>
+          <li>FSM design</li>
+          <li>Synchronous design</li>
+          <li>Reset architecture</li>
+        </ul>
+      </div>
+
+      <!-- Interfaces -->
+      <div class="tech-card reveal reveal--delay-1">
+        <div class="tech-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="18" r="5" stroke="#5b8dde" stroke-width="1.2"/>
+            <circle cx="28" cy="18" r="5" stroke="#5b8dde" stroke-width="1.2"/>
+            <path d="M13 18h10" stroke="#5b8dde" stroke-width="1.2"/>
+            <path d="M8 8V4M28 8V4M8 32v-4M28 32v-4" stroke="#5b8dde" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="tech-card__title">Interfaces</div>
+        <ul class="tech-list" aria-label="Interface protocols">
+          <li>APB</li>
+          <li>AXI4-Lite</li>
+          <li>AXI4-Stream</li>
+          <li>UART</li>
+          <li>SPI / I²C</li>
+          <li>Future high-speed interfaces</li>
+        </ul>
+      </div>
+
+      <!-- Verification -->
+      <div class="tech-card reveal reveal--delay-2">
+        <div class="tech-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="12" stroke="#4caf82" stroke-width="1.2"/>
+            <path d="M12 18l4 4 8-8" stroke="#4caf82" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="tech-card__title" style="color:#4caf82;">Verification</div>
+        <ul class="tech-list" aria-label="Verification tools and methodology">
+          <li>SystemVerilog</li>
+          <li>UVM</li>
+          <li>Assertions (SVA)</li>
+          <li>Functional coverage</li>
+          <li>Regression</li>
+          <li>Constrained-random</li>
+        </ul>
+      </div>
+
+      <!-- Signoff -->
+      <div class="tech-card reveal reveal--delay-3">
+        <div class="tech-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 28L18 6l12 22H6z" stroke="#c8943a" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M18 15v7" stroke="#c8943a" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="18" cy="24.5" r="0.8" fill="#c8943a"/>
+          </svg>
+        </div>
+        <div class="tech-card__title" style="color:#c8943a;">Signoff-Oriented</div>
+        <ul class="tech-list" aria-label="Signoff checks">
+          <li>Lint</li>
+          <li>CDC analysis</li>
+          <li>RDC analysis</li>
+          <li>Synthesis</li>
+          <li>Timing awareness</li>
+          <li>FPGA validation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ════════════════════════════════════════════
+     OPEN ENGINEERING SECTION
+════════════════════════════════════════════ -->
+<section class="section" id="resources" aria-labelledby="open-eng-heading">
+  <div class="container">
+    <span class="section-label">OPEN ENGINEERING</span>
+
+    <div class="open-eng__grid">
+
+      <div>
+        <h2 class="section-heading" id="open-eng-heading">
+          Transparent engineering.
+        </h2>
+        <p class="section-subheading" style="margin-bottom:32px;">
+          Public documentation, clear interfaces and reproducible verification are central to how we build IP.
+        </p>
+
+        <ul class="open-eng__list" role="list" aria-label="Open engineering practices">
+          <li class="open-eng__item reveal">
+            <div class="open-eng__item-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4zM5 4V2h6v2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            Public documentation
+          </li>
+          <li class="open-eng__item reveal reveal--delay-1">
+            <div class="open-eng__item-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M8 5v3l2 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            Versioned releases
+          </li>
+          <li class="open-eng__item reveal reveal--delay-2">
+            <div class="open-eng__item-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3h10v2H3zM3 7h7v2H3zM3 11h5v2H3z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            Changelogs
+          </li>
+          <li class="open-eng__item reveal reveal--delay-3">
+            <div class="open-eng__item-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            Verification reports
+          </li>
+          <li class="open-eng__item reveal reveal--delay-4">
+            <div class="open-eng__item-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12V7l6-5 6 5v5a1 1 0 01-1 1h-3V9H6v3H3a1 1 0 01-1-1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            Integration examples
+          </li>
+          <li class="open-eng__item reveal">
+            <div class="open-eng__item-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M5 7l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            FPGA reference designs where applicable
+          </li>
+        </ul>
+      </div>
+
+      <div class="open-eng__cta">
+        <div class="open-eng__statement reveal">
+          Engineering decisions are documented. Not just the code.
+        </div>
+        <p class="open-eng__desc reveal reveal--delay-1">
+          We believe that good IP documentation reduces integration risk and engineering time. Design decisions, known limitations and verification methodology are part of every release.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;" class="reveal reveal--delay-2">
+          <a href="https://github.com/pineapplix" class="btn btn--primary" id="github-explore-btn" target="_blank" rel="noopener noreferrer">
+            Explore GitHub <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="https://github.com/pineapplix" class="btn btn--outline" id="open-eng-docs-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+
+        <!-- Monospace notice box -->
+        <div style="margin-top:24px; padding:20px; background:var(--bg-surface); border:1px solid var(--bg-border); border-radius:var(--radius-md); font-family:var(--font-mono); font-size:0.625rem; color:var(--text-muted); line-height:2;" class="reveal reveal--delay-3">
+          <span style="color:var(--accent-bright);">NOTE:</span> Proprietary RTL is not publicly released.<br>
+          Documentation, testbench infrastructure and integration<br>
+          examples are published progressively with releases.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     ROADMAP SECTION
+════════════════════════════════════════════ -->
+<section class="section section--dark" id="roadmap" aria-labelledby="roadmap-heading">
+  <div class="container">
+    <span class="section-label">DEVELOPMENT STATUS</span>
+
+    <h2 class="section-heading" id="roadmap-heading">
+      Building the IP stack.
+    </h2>
+    <p class="section-subheading">
+      A realistic view of what is being built, what comes next, and the longer-term direction.
+    </p>
+
+    <div class="roadmap__timeline" role="list" aria-label="Development roadmap">
+
+      <!-- NOW -->
+      <div class="roadmap-item" role="listitem" tabindex="0" aria-expanded="false">
+        <div class="roadmap-item__dot roadmap-item__dot--active" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="6" fill="rgba(91,141,222,0.3)" stroke="#5b8dde" stroke-width="1.5"/>
+            <circle cx="10" cy="10" r="3" fill="#5b8dde"/>
+          </svg>
+        </div>
+        <div class="roadmap-item__phase roadmap-item__phase--active">NOW</div>
+        <div class="roadmap-item__title">UART Controller IP</div>
+        <p class="roadmap-item__desc">RTL, AXI4-Lite interface, verification environment and documentation. Active development.</p>
+        <div class="roadmap-item__detail">
+          RTL design — in progress<br>
+          AXI4-Lite register interface — in progress<br>
+          UVM environment — in progress<br>
+          SVA assertions — in progress<br>
+          Documentation — in progress
+        </div>
+      </div>
+
+      <!-- NEXT -->
+      <div class="roadmap-item" role="listitem" tabindex="0" aria-expanded="false">
+        <div class="roadmap-item__dot roadmap-item__dot--next" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="6" fill="rgba(200,148,58,0.15)" stroke="rgba(200,148,58,0.5)" stroke-width="1.5"/>
+            <circle cx="10" cy="10" r="2.5" fill="rgba(200,148,58,0.5)"/>
+          </svg>
+        </div>
+        <div class="roadmap-item__phase roadmap-item__phase--next">NEXT</div>
+        <div class="roadmap-item__title">Verification IP</div>
+        <p class="roadmap-item__desc">Reusable protocol verification infrastructure and UVM base components.</p>
+        <div class="roadmap-item__detail">
+          UVM base library<br>
+          Protocol-specific agents<br>
+          Coverage infrastructure<br>
+          Regression framework<br>
+          Status: planned
+        </div>
+      </div>
+
+      <!-- FUTURE -->
+      <div class="roadmap-item" role="listitem" tabindex="0" aria-expanded="false">
+        <div class="roadmap-item__dot roadmap-item__dot--future" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="6" fill="transparent" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="3 2"/>
+          </svg>
+        </div>
+        <div class="roadmap-item__phase roadmap-item__phase--future">FUTURE</div>
+        <div class="roadmap-item__title">High-Speed Interfaces</div>
+        <p class="roadmap-item__desc">Ethernet, PCIe and Memory Interface IP. Not currently in development.</p>
+        <div class="roadmap-item__detail">
+          Ethernet MAC (planned)<br>
+          PCIe endpoint (planned)<br>
+          DDR interface (planned)<br>
+          Status: concept / planned
+        </div>
+      </div>
+
+      <!-- LONG TERM -->
+      <div class="roadmap-item" role="listitem" tabindex="0" aria-expanded="false">
+        <div class="roadmap-item__dot roadmap-item__dot--longterm" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="6" fill="transparent" stroke="rgba(91,141,222,0.15)" stroke-width="1.5" stroke-dasharray="2 3"/>
+          </svg>
+        </div>
+        <div class="roadmap-item__phase roadmap-item__phase--longterm">LONG TERM</div>
+        <div class="roadmap-item__title">SoC Infrastructure</div>
+        <p class="roadmap-item__desc">Interconnect fabric, subsystem and heterogeneous compute infrastructure IP.</p>
+        <div class="roadmap-item__detail">
+          On-chip interconnect<br>
+          System integration IP<br>
+          Heterogeneous compute support<br>
+          Status: long-term direction
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     WHY PINEAPPLIX SECTION
+════════════════════════════════════════════ -->
+<section class="section" id="why" aria-labelledby="why-heading">
+  <div class="container">
+    <span class="section-label">WHY PINEAPPLIX</span>
+
+    <h2 class="section-heading" id="why-heading">
+      Designed for the engineer integrating the IP.
+    </h2>
+
+    <div class="why__grid">
+
+      <div class="why-card reveal">
+        <div class="why-card__number">01 ——</div>
+        <h3 class="why-card__title">Predictable</h3>
+        <p class="why-card__desc">
+          Clear interfaces, parameters and documented behavior. No hidden dependencies. Integration behavior matches what the documentation describes.
+        </p>
+      </div>
+
+      <div class="why-card reveal reveal--delay-1">
+        <div class="why-card__number">02 ——</div>
+        <h3 class="why-card__title">Verifiable</h3>
+        <p class="why-card__desc">
+          Verification is developed alongside the RTL. Coverage metrics, assertion lists and regression reports are published as part of the IP release.
+        </p>
+      </div>
+
+      <div class="why-card reveal reveal--delay-2">
+        <div class="why-card__number">03 ——</div>
+        <h3 class="why-card__title">Reusable</h3>
+        <p class="why-card__desc">
+          Architecture designed for ASIC, FPGA and SoC reuse. Parameterized at the right level of abstraction — not over-engineered, not rigid.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="why__statement reveal" style="margin-top:48px;">
+      The goal is simple: reduce the engineering effort between "IP selected" and "IP working in silicon."
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     ABOUT SECTION
+════════════════════════════════════════════ -->
+<section class="section section--dark" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <span class="section-label">ABOUT</span>
+
+    <div class="about__inner">
+      <div class="about__content">
+        <h2 class="section-heading" id="about-heading">
+          Pineapplix is an engineering-first semiconductor IP company.
+        </h2>
+        <p>
+          We are building reusable digital IP and verification infrastructure for the next generation of ASIC, FPGA and SoC systems.
+        </p>
+        <p>
+          Semiconductor IP development is a disciplined engineering practice. Every design decision has consequences at silicon — in area, power, timing and integration complexity. We take that seriously.
+        </p>
+        <p>
+          Pineapplix is early stage. We are building the engineering infrastructure before claiming a product portfolio.
+        </p>
+      </div>
+
+      <div class="about__meta">
+        <div class="about__meta-card">
+          <div class="about__meta-label">STAGE</div>
+          <div class="about__meta-value"><strong>Early development</strong> — UART Controller IP (PNX-UART) in active design and verification</div>
+        </div>
+        <div class="about__meta-card">
+          <div class="about__meta-label">TEAM</div>
+          <div class="about__meta-value">
+            <strong>Founder / Hardware Engineer</strong><br>
+            <span style="color:var(--text-muted); font-family:var(--font-mono); font-size:0.6875rem; letter-spacing:0.04em;">RTL · Verification · SoC Integration</span>
+          </div>
+        </div>
+        <div class="about__meta-card">
+          <div class="about__meta-label">FOCUS</div>
+          <div class="about__meta-value">Reusable digital IP and verification infrastructure for ASIC, FPGA and SoC development</div>
+        </div>
+        <div class="about__meta-card">
+          <div class="about__meta-label">ESTABLISHED</div>
+          <div class="about__meta-value" style="font-family:var(--font-mono); font-size:0.875rem; letter-spacing:0.04em;">2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════
+     CONTACT SECTION
+════════════════════════════════════════════ -->
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <span class="section-label">CONTACT</span>
+
+    <h2 class="section-heading" id="contact-heading">
+      Building a chip? Let's talk IP.
+    </h2>
+    <p class="section-subheading" style="margin-bottom:56px;">
+      Tell us what you are building and where reusable IP or verification infrastructure could help.
+    </p>
+
+    <div class="contact__inner">
+      <!-- Contact Form -->
+      <div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Work Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="you@company.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-company">Company</label>
+            <input
+              class="form-input"
+              type="text"
+              id="contact-company"
+              name="company"
+              placeholder="Your company or project"
+              autocomplete="organization"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-building">What are you building?</label>
+            <textarea
+              class="form-textarea"
+              id="contact-building"
+              name="building"
+              placeholder="Describe your chip, system or integration challenge..."
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-area">Area of interest</label>
+            <select class="form-select" id="contact-area" name="area">
+              <option value="">Select an area...</option>
+              <option value="ip">IP — Design IP licensing or evaluation</option>
+              <option value="verification">Verification — VIP or verification infrastructure</option>
+              <option value="integration">Integration — Technical integration support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="contact-submit-btn" style="align-self:flex-start;">
+            Contact Pineapplix <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <div class="form-success" id="form-success" role="status">
+            Message received. We will be in touch.
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Links -->
+      <div class="contact__links">
+        <div class="contact__links-title">Other Ways to Connect</div>
+
+        <a href="https://github.com/pineapplix" class="contact-link-item" id="contact-github-link" target="_blank" rel="noopener noreferrer">
+          <div class="contact-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="contact-link-text">
+            <span class="contact-link-name">GitHub</span>
+            <span class="contact-link-url">github.com/pineapplix</span>
+          </div>
+        </a>
+
+
+        <a href="mailto:contact@pineapplix.io" class="contact-link-item" id="contact-email-link">
+          <div class="contact-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M1 6l7 4 7-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="contact-link-text">
+            <span class="contact-link-name">Email</span>
+            <span class="contact-link-url">contact@pineapplix.io</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main><!-- /main -->
+
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <div class="footer__logo">PINEAPPLIX</div>
+        <p class="footer__tagline">Semiconductor IP, built for real silicon.</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
+          <span class="tag tag--muted">RTL</span>
+          <span class="tag tag--muted">UVM</span>
+          <span class="tag tag--muted">ASIC</span>
+          <span class="tag tag--muted">FPGA</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Products</div>
+        <ul class="footer__links">
+          <li><a href="#products">UART Controller</a></li>
+          <li><a href="#products">Verification IP</a></li>
+          <li><a href="#products">Assertion IP</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Engineering</div>
+        <ul class="footer__links">
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#architecture">IP Architecture</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://github.com/pineapplix" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 PINEAPPLIX</span>
+      <div class="footer__legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
