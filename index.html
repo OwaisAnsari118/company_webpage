@@ -49,7 +49,7 @@
     <a href="/" class="nav__logo" aria-label="Pineapplix home">PINEAPPLI<span>X</span></a>
 
     <div class="nav__links" role="list">
-      <a href="#products"    class="nav__link" role="listitem">Products</a>
+      <a href="#products"    class="nav__link" role="listitem">IP Portfolio</a>
       <a href="#technology"  class="nav__link" role="listitem">Technology</a>
 
       <a href="#resources"   class="nav__link" role="listitem">Resources</a>
@@ -75,7 +75,7 @@
 
 <!-- Mobile Navigation -->
 <div class="nav__mobile" id="mobile-menu" role="menu" aria-label="Mobile navigation">
-  <a href="#products"       class="nav__mobile-link" role="menuitem">Products</a>
+  <a href="#products"       class="nav__mobile-link" role="menuitem">IP Portfolio</a>
   <a href="#technology"     class="nav__mobile-link" role="menuitem">Technology</a>
 
   <a href="#resources"      class="nav__mobile-link" role="menuitem">Resources</a>
@@ -104,7 +104,7 @@
       </h1>
 
       <p class="hero__sub">
-        Reusable, configurable and verification-ready IP for ASIC, FPGA and SoC development.
+        High-quality, verification-ready Design IP for ASIC, FPGA and SoC development. Engineered to reduce integration risk and accelerate silicon bring-up.
       </p>
 
       <div class="hero__ctas">
@@ -334,7 +334,7 @@
 ════════════════════════════════════════════ -->
 <section class="section" id="products" aria-labelledby="products-heading">
   <div class="container">
-    <span class="section-label">PRODUCTS</span>
+    <span class="section-label">IP PORTFOLIO</span>
 
     <h2 class="section-heading" id="products-heading">
       IP designed as a product.
@@ -343,104 +343,116 @@
       Every Pineapplix IP block is developed with RTL, verification, documentation and integration in mind.
     </p>
 
-    <div class="products__grid">
-
-      <!-- Product 01: PNX-UART (featured) -->
-      <article class="product-card product-card--wide reveal" aria-labelledby="product-uart-title">
-        <div class="product-card__body">
-          <div class="product-card__header">
-            <div>
-              <h3 class="product-card__title" id="product-uart-title">Pineapplix UART Controller</h3>
-              <span style="font-family:var(--font-mono); font-size:0.6rem; color:var(--text-muted); letter-spacing:0.1em;">PNX-IP-UART-001</span>
+    <!-- INTERFACE IP CATEGORY -->
+    <div class="products-category reveal">
+      <h3 style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-bright); letter-spacing:0.15em; margin-bottom:20px; text-transform:uppercase; display:flex; align-items:center; gap:12px;">
+        <span style="width:24px; height:1px; background:var(--accent-bright);"></span>
+        Interface IP
+      </h3>
+      <div class="products__grid" style="margin-top:0;">
+        <!-- Product 01: PNX-UART -->
+        <article class="product-card product-card--wide" aria-labelledby="product-uart-title">
+          <div class="product-card__body">
+            <div class="product-card__header">
+              <div>
+                <h4 class="product-card__title" id="product-uart-title">Pineapplix UART Controller</h4>
+                <span style="font-family:var(--font-mono); font-size:0.6rem; color:var(--text-muted); letter-spacing:0.1em;">PNX-IP-UART-001</span>
+              </div>
+              <span class="tag tag--accent">
+                <span class="status-dot status-dot--active"></span>
+                V1.0.0 / DEVELOPMENT
+              </span>
             </div>
-            <span class="tag tag--accent">
-              <span class="status-dot status-dot--active"></span>
-              V1.0.0 / DEVELOPMENT
-            </span>
+            <p class="product-card__desc">
+              Configurable, synthesizable UART controller designed for FPGA and ASIC integration. Full-duplex serial communication with an AXI4-Lite register interface, independent FIFOs and a complete SystemVerilog RTL implementation.
+            </p>
+
+            <div class="product-features" aria-label="Feature list">
+              <span class="product-feature">Full-duplex async serial</span>
+              <span class="product-feature">AXI4-Lite register interface</span>
+              <span class="product-feature">Configurable baud rate</span>
+              <span class="product-feature">Independent TX / RX FIFOs</span>
+              <span class="product-feature">Interrupt support</span>
+              <span class="product-feature">RX oversampling</span>
+              <span class="product-feature">Framing-error detection</span>
+              <span class="product-feature">SystemVerilog RTL</span>
+            </div>
           </div>
-          <p class="product-card__desc">
-            Configurable, synthesizable UART controller designed for FPGA and ASIC integration. Full-duplex serial communication with an AXI4-Lite register interface, independent FIFOs and a complete SystemVerilog RTL implementation.
-          </p>
 
-          <div class="product-features" aria-label="Feature list">
-            <span class="product-feature">Full-duplex async serial</span>
-            <span class="product-feature">AXI4-Lite register interface</span>
-            <span class="product-feature">Configurable baud rate</span>
-            <span class="product-feature">Independent TX / RX FIFOs</span>
-            <span class="product-feature">Interrupt support</span>
-            <span class="product-feature">RX oversampling</span>
-            <span class="product-feature">Framing-error detection</span>
-            <span class="product-feature">SystemVerilog RTL</span>
+          <div class="product-card__footer">
+            <a href="#contact" class="btn btn--primary" id="uart-view-btn">Request Access <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <span class="tag tag--muted" style="font-size:0.6rem;">SYSTEMVERILOG</span>
+              <span class="tag tag--muted" style="font-size:0.6rem;">FPGA / ASIC</span>
+            </div>
           </div>
+        </article>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:40px;">
+      <!-- VERIFICATION IP CATEGORY -->
+      <div class="products-category reveal reveal--delay-1">
+        <h3 style="font-family:var(--font-mono); font-size:0.75rem; color:#4caf82; letter-spacing:0.15em; margin-bottom:20px; text-transform:uppercase; display:flex; align-items:center; gap:12px;">
+          <span style="width:24px; height:1px; background:#4caf82;"></span>
+          Verification IP
+        </h3>
+        <div class="products__grid" style="grid-template-columns:1fr; margin-top:0;">
+          <article class="product-card product-card--coming-soon" aria-labelledby="product-vip-title">
+            <div class="product-card__header">
+              <h4 class="product-card__title" id="product-vip-title">UVM Verification IP</h4>
+              <span class="tag tag--amber">
+                <span class="status-dot status-dot--amber"></span>
+                COMING SOON
+              </span>
+            </div>
+            <p class="product-card__desc">
+              Reusable UVM verification infrastructure for validating standard digital interfaces and subsystem behavior.
+            </p>
+
+            <div class="product-features" style="grid-template-columns: 1fr;">
+              <span class="product-feature">SystemVerilog / UVM</span>
+              <span class="product-feature">Protocol-specific agents</span>
+              <span class="product-feature">Functional coverage</span>
+              <span class="product-feature">Constrained-random testing</span>
+            </div>
+
+            <div class="product-card__footer" style="margin-top:auto;">
+              <a href="#contact" class="btn btn--outline btn--sm" id="vip-explore-btn">Notify on release</a>
+            </div>
+          </article>
         </div>
+      </div>
 
-        <div class="product-card__footer">
-          <a href="#contact" class="btn btn--primary" id="uart-view-btn">Request Access <span class="btn-arrow" aria-hidden="true">→</span></a>
-          <div style="display:flex; flex-direction:column; gap:6px;">
-            <span class="tag tag--muted" style="font-size:0.6rem;">SYSTEMVERILOG</span>
-            <span class="tag tag--muted" style="font-size:0.6rem;">FPGA / ASIC</span>
-          </div>
+      <!-- ASSERTION IP CATEGORY -->
+      <div class="products-category reveal reveal--delay-2">
+        <h3 style="font-family:var(--font-mono); font-size:0.75rem; color:#c8943a; letter-spacing:0.15em; margin-bottom:20px; text-transform:uppercase; display:flex; align-items:center; gap:12px;">
+          <span style="width:24px; height:1px; background:#c8943a;"></span>
+          Assertion IP
+        </h3>
+        <div class="products__grid" style="grid-template-columns:1fr; margin-top:0;">
+          <article class="product-card product-card--coming-soon" aria-labelledby="product-aip-title">
+            <div class="product-card__header">
+              <h4 class="product-card__title" id="product-aip-title">Protocol Assertions</h4>
+              <span class="tag tag--muted">PLANNED</span>
+            </div>
+            <p class="product-card__desc">
+              Reusable SystemVerilog Assertions (SVA) for faster verification and integration. Designed to be applied at the IP boundary.
+            </p>
+
+            <div class="product-features" style="grid-template-columns: 1fr;">
+              <span class="product-feature">Interface property checks</span>
+              <span class="product-feature">Standard protocol coverage</span>
+              <span class="product-feature">Simulation & formal targets</span>
+              <span class="product-feature">Design-level invariants</span>
+            </div>
+
+            <div class="product-card__footer" style="margin-top:auto;">
+              <a href="#contact" class="btn btn--ghost btn--sm" id="aip-learn-btn">Learn More</a>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <!-- Product 02: Verification IP -->
-      <article class="product-card product-card--coming-soon reveal reveal--delay-1" aria-labelledby="product-vip-title">
-        <div class="product-card__header">
-          <h3 class="product-card__title" id="product-vip-title">Verification IP</h3>
-          <span class="tag tag--amber">
-            <span class="status-dot status-dot--amber"></span>
-            COMING SOON
-          </span>
-        </div>
-        <p class="product-card__desc">
-          Reusable verification infrastructure for validating digital interfaces and subsystem behavior.
-        </p>
-
-        <div class="product-features" style="grid-template-columns: 1fr;">
-          <span class="product-feature">SystemVerilog</span>
-          <span class="product-feature">UVM</span>
-          <span class="product-feature">Assertions</span>
-          <span class="product-feature">Functional coverage</span>
-          <span class="product-feature">Constrained-random testing</span>
-          <span class="product-feature">Regression infrastructure</span>
-        </div>
-
-        <div class="product-card__footer" style="margin-top:auto;">
-          <a href="#contact" class="btn btn--outline btn--sm" id="vip-explore-btn">Explore Verification</a>
-        </div>
-      </article>
-
-      <!-- Product 03: Assertion IP -->
-      <article class="product-card product-card--coming-soon reveal reveal--delay-2" aria-labelledby="product-aip-title">
-        <div class="product-card__header">
-          <h3 class="product-card__title" id="product-aip-title">Assertion IP</h3>
-          <span class="tag tag--muted">PLANNED</span>
-        </div>
-        <p class="product-card__desc">
-          Reusable protocol and design-property assertions for faster verification and integration. Designed to be applied at the IP boundary and subsystem level.
-        </p>
-
-        <div class="product-features" style="grid-template-columns: 1fr;">
-          <span class="product-feature">Protocol assertions</span>
-          <span class="product-feature">Interface property checks</span>
-          <span class="product-feature">Design-level invariants</span>
-          <span class="product-feature">Simulation & formal targets</span>
-        </div>
-
-        <div class="product-card__footer" style="margin-top:auto;">
-          <a href="#contact" class="btn btn--ghost btn--sm" id="aip-learn-btn">Learn More</a>
-        </div>
-      </article>
-
-      <!-- More IP in Development -->
-      <article class="product-card product-card--future reveal reveal--delay-3" aria-label="Upcoming IP products">
-        <p class="future-title">More IP in development</p>
-        <p class="future-items">
-          Ethernet &nbsp;•&nbsp; PCIe &nbsp;•&nbsp; Memory Interfaces &nbsp;•&nbsp; SoC Infrastructure
-        </p>
-        <a href="#contact" class="btn btn--ghost btn--sm" style="margin-top:16px;" id="future-ip-btn">Get notified</a>
-      </article>
-
+      </div>
     </div>
   </div>
 </section>
