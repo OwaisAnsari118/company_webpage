@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-offwhite text-ink-900 antialiased;
+  }
+  body {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-brand-yellow;
+  }
+  ::selection {
+    @apply bg-brand-yellow text-brand-black;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.2em];
+  }
+}
+
+/* ------------------------------------------------------------------
+ * Scroll-in reveal (see components/Reveal.tsx)
+ * Content is only hidden once the inline reveal script has added
+ * `js-reveal` to <html>, so nothing is ever invisible without JavaScript
+ * or for users who prefer reduced motion.
+ * ------------------------------------------------------------------ */
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero circuit traces: dashes travel along each path. */
+.circuit-trace {
+  stroke-dasharray: 6 14;
+  stroke-dashoffset: 200;
+}
+@media (prefers-reduced-motion: reduce) {
+  .circuit-trace,
+  .circuit-node {
+    animation: none !important;
+  }
+}
